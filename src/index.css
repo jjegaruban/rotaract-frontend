@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+
+/* Load Bebas font from public folder */
+@font-face {
+  font-family: 'Bebas';
+  src: url('/fonts/Bebas-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Make a Tailwind-like utility class */
+.font-bebas {
+  font-family: 'Bebas', sans-serif;
+}
+
+/* Keep Inter as default for everything else */
+body {
+  font-family: 'Inter', sans-serif;
+}
