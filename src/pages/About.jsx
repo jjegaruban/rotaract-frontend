@@ -1,3 +1,4 @@
+
 import React from "react";
 import logo from "../assets/logo/logo.png";
 
@@ -10,19 +11,16 @@ const About = () => {
   ];
 
   return (
-    <div className="bg-white font-inter">
-      {/* Hero Section */}
-      <section className="relative py-20 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-[#fef2f7] to-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="font-bebas text-5xl md:text-7xl text-[#d22163] uppercase tracking-wide">
-            About Our Club
-          </h1>
-          <div className="mt-8 max-w-3xl mx-auto">
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-              Rotaract Club of Kandy Hill Capital has been serving communities since 1989, creating lasting change through fellowship and service.
-            </p>
-          </div>
-        </div>
+    <div className="bg-white font-inter min-h-screen">
+
+      {/* Heading Section - Pink Background */}
+      <section className="bg-[#fef2f7] pt-32 md:pt-36 lg:pt-40 pb-16 px-6 text-center">
+        <h1 className="font-bebas text-5xl md:text-6xl text-[#d22163] uppercase tracking-wide">
+          About Our Club
+        </h1>
+        <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+          Rotaract Club of Kandy Hill Capital has been serving communities since 1989, creating lasting change through fellowship and service.
+        </p>
       </section>
 
       {/* Who We Are */}

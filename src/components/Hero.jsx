@@ -143,8 +143,8 @@ const Home = () => {
       </section>
 
       {/* Memories Gallery */}
-        {/* Memories - Premium Asymmetrical Grid (Slightly Smaller) */}
-<section className="px-6 md:px-12 lg:px-24 py-16 bg-gray-50">
+        {/* Memories - Tight Instagram-Style Gallery */}
+<section className="px-4 md:px-12 lg:px-24 py-16 bg-gray-50">
   <div className="max-w-6xl mx-auto text-center">
     <h2 className="text-4xl font-bold text-[#d22163] mb-4">Our Memories</h2>
     <div className="w-20 h-1 bg-[#d22163] mx-auto mb-6"></div>
@@ -152,31 +152,23 @@ const Home = () => {
       Capturing the moments that make us unforgettable.
     </p>
 
-    <div className="grid grid-cols-6 gap-4">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 auto-rows-auto">
       {memories.map((m, i) => {
-        // Same shapes as before but slightly smaller spans
-        const shapes = [
-          "col-span-3 row-span-2",
-          "col-span-3 row-span-1",
-          "col-span-2 row-span-1",
-          "col-span-4 row-span-1",
-          "col-span-2 row-span-2",
-          "col-span-3 row-span-1"
-        ];
+        const isPortrait = i % 2 === 0; // alternate portrait and square
         return (
           <div
             key={i}
-            className={`relative overflow-hidden rounded-2xl shadow-md group ${shapes[i % shapes.length]}`}
-            style={{ height: "240px" }} // Was bigger before, now reduced height
+            className="relative overflow-hidden rounded-lg shadow-sm group w-full"
+            style={{ aspectRatio: isPortrait ? "3 / 4" : "1 / 1" }}
           >
             <img
-              src={logo} // Replace with your actual images
+              src={logo} // replace with actual images
               alt={m}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
             {/* Hover overlay */}
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all">
-              <span className="text-white font-semibold text-lg px-2 text-center">{m}</span>
+            <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all">
+              <span className="text-white font-semibold text-sm text-center px-1">{m}</span>
             </div>
           </div>
         );

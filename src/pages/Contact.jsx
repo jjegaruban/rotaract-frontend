@@ -42,23 +42,24 @@ const Contact = () => {
 
   return (
     <div className="font-inter min-h-screen bg-white">
+
       {/* Hero Section */}
-      <div className="bg-gradient-to-b from-[#fef2f7] to-white py-20 px-6 text-center">
+      <section className="bg-[#fef2f7] pt-32 md:pt-36 lg:pt-40 pb-16 px-6 text-center">
         <h1 className="font-bebas text-5xl md:text-6xl text-[#d22163] uppercase tracking-wide">
           Contact Us
         </h1>
         <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
           Reach out to our leadership team for any inquiries
         </p>
-      </div>
+      </section>
 
       {/* Contact Cards Section */}
-      <div className="max-w-6xl mx-auto px-6 py-12">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="max-w-6xl mx-auto px-6 py-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {contactTeams.map((member, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow"
+              className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300"
             >
               <div className="p-6">
                 <div className="mb-4">
@@ -83,23 +84,24 @@ const Contact = () => {
             </div>
           ))}
         </div>
-      </div>
+      </section>
 
       {/* General Contact Section */}
-      <div className="bg-[#fef2f7] py-16 px-6">
+      <section className="bg-[#fef2f7] py-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-[#d22163] mb-6">General Inquiries</h2>
-          <p className="text-gray-700 mb-8">
+          <p className="text-gray-700 mb-8 text-lg">
             For all other questions, please contact us at:<br />
             <span className="font-medium">info@rotaractkandy.org</span> or call <span className="font-medium">+94 81 222 3333</span>
           </p>
-          <div className="flex justify-center space-x-4">
-            <a href="#" className="bg-[#d22163] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#b21d56] transition">
+          <div className="flex justify-center">
+            <a href="#" className="bg-[#d22163] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#b21d56] transition-colors">
               Send Us a Message
             </a>
           </div>
         </div>
-      </div>
+      </section>
+
     </div>
   );
 };
